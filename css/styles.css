@@ -2,6 +2,9 @@
 @import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 /* Universal selectors */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +25,7 @@ html {
   z-index: 999;
 }
 .navbar.sticky {
-  background: #86090f;
+  /* background: #86090f; */
   padding: 15px 0;
 }
 .navbar .logo a {
@@ -52,9 +55,6 @@ html {
 .navbar .menu > li > a:hover {
   color: #f89ba0;
 }
-.navbar.sticky .menu > li > a:hover {
-  color: whitesmoke;
-}
 .navbar .nav-links {
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ html {
   position: fixed;
   height: 45px;
   width: 42px;
-  background: #86090f;
+  background:red;
   right: 30px;
   bottom: 30px;
   text-align: center;
@@ -101,7 +101,7 @@ html {
 .home {
   display: flex;
   height: 100vh;
-  background: url("../images/banner-image.png") no-repeat center;
+  /* background: url("../images/banner-image.png") no-repeat center; */
   background-size: cover;
   /* color: whitesmoke; */
   min-height: 500px;
@@ -145,7 +145,7 @@ html {
 }
 /* all section styling*/
 section {
-  padding: 100px 0;
+  padding: 10px 0;
 }
 section .title {
   position: relative;
@@ -214,7 +214,7 @@ section .title::before {
 .about .about-content .right .text h5 span {
   color: #86090f;
 }
-.about .about-content .right a {
+.download{
   display: inline-block;
   background: #86090f;
   color: whitesmoke;
@@ -231,6 +231,14 @@ section .title::before {
   color: #86090f;
   font-weight: 500;
   background: transparent;
+}
+#testimonial:hover{
+  transform: rotateX(45deg) rotateZ(-25deg);
+  transform-style: preserve-3d;
+  transition: .3s;
+  vertical-align: bottom;
+  filter: grayscale(50%);
+  transition: .3s;
 }
 /* services section styling */
 .services,
@@ -367,12 +375,12 @@ section .title::before {
   color: #f89ba0;
 }
 .projects .carousel .card img {
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   object-fit: cover;
-  border-radius: 10%;
-  border: 5px solid #f89ba0;
-  transition: all 0.3s ease;
+  /* border-radius: 10%; */
+  /* border: 5px solid #f89ba0; */
+  /* transition: all 0.3s ease; */
 }
 .projects .carousel .card {
   background: #222;
@@ -382,7 +390,7 @@ section .title::before {
   transition: all 0.3s ease;
 }
 .projects .carousel .card:hover {
-  background: #f89ba0;
+  /* background: #f89ba0; */
   color: #111;
 }
 .projects .carousel .card:hover img {
@@ -681,7 +689,7 @@ footer .fa-heart-o {
     transform: translate(-50%);
   }
 }
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   section .title::after {
     background: #fff;
     position: absolute;
@@ -691,9 +699,9 @@ footer .fa-heart-o {
     left: 50%;
     padding: 5px;
     transform: translate(-50%);
-  }
+  } */
   .home {
-    background: #111;
+    background: #212121;
   }
   html,
   body {
